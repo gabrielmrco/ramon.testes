@@ -1,118 +1,303 @@
 {
-    "produtos": [
+  "produtos": [
+    {
+      "id": 2,
+      "nome": "Camiseta",
+      "descricao": "Camiseta de algodão",
+      "preco": 30,
+      "categoria_id": 2,
+      "imagem": "camiseta.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Vaso de Flores",
+      "descricao": "Vaso de flores decorativo",
+      "preco": 50,
+      "categoria_id": 3,
+      "imagem": "vaso_flores.jpg"
+    },
+    {
+      "nome": "produto teste",
+      "descricao": "uma descricao qualquer",
+      "preco": 600,
+      "imagem": "foto.jpg",
+      "id": "e8801215-9b11-4a43-b979-344afccbfcc9"
+    },
+    {
+      "nome": "produto teste2",
+      "descricao": "uma descricao qualquer",
+      "preco": 700,
+      "imagem": "foto.jpg",
+      "id": "fde550fa-7f2b-4560-bff7-5011f67b6757"
+    },
+    {
+      "nome": "produto teste2",
+      "descricao": "uma descricao qualquer",
+      "preco": 700,
+      "imagem": "foto.jpg",
+      "id": "cd3b9cb7-b563-44c0-93d0-d1fc538a5de6"
+    },
+    {
+      "nome": "produto teste2",
+      "descricao": "uma descricao qualquer",
+      "preco": 700,
+      "imagem": "foto.jpg",
+      "id": "5427c68a-2ef2-4b13-bf7c-2ee741e047af"
+    },
+    {
+      "nome": "Produto Atualizado",
+      "preco": 149.99,
+      "id": 12
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    }
+  ],
+  "clientes": [
+    {
+      "id": 2,
+      "nome": "Maria Oliveira",
+      "email": "maria.oliveira@example.com",
+      "senha": "abcdef",
+      "endereco": {
+        "rua": "Rua das Flores",
+        "numero": 456,
+        "bairro": "Jardim",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "cep": "98765-432"
+      }
+    },
+    {
+      "nome": "Douglass",
+      "email": "BD@texte.com",
+      "senha": "DbBd",
+      "id": 3
+    },
+    {
+      "nome": "Gabriel Atualizado",
+      "email": "atualizado@xte.com",
+      "senha": "NovaSenha123",
+      "id": 4
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 5
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 6
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 7
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 8
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 9
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 10
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 11
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 12
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 13
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 14
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 15
+    },
+    {
+      "nome": "Gabriel",
+      "email": "BD@xte.com",
+      "senha": "DbBdGa",
+      "id": 16
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 17
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 18
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 19
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 20
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 21
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 22
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 23
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "cliente_id": 1,
+      "data_pedido": "2022-01-01",
+      "status": "pendente",
+      "itens": [
         {
-            "id": 1,
-            "nome": "Smartphone",
-            "descricao": "Smartphone de última geração",
-            "preco": 1500,
-            "imagem": "smartphone.jpg"
+          "produto_id": 1,
+          "quantidade": 2,
+          "preco_unitario": 1500
         },
         {
-            "id": 2,
-            "nome": "Camiseta",
-            "descricao": "Camiseta de algodão",
-            "preco": 30,
-            "categoria_id": 2,
-            "imagem": "camiseta.jpg"
-        },
-        {
-            "id": 3,
-            "nome": "Vaso de Flores",
-            "descricao": "Vaso de flores decorativo",
-            "preco": 50,
-            "categoria_id": 3,
-            "imagem": "vaso_flores.jpg"
-        },
-        {
-            "nome": "produto teste",
-            "descricao": "uma descricao qualquer",
-            "preco": 600,
-            "imagem": "foto.jpg",
-            "id": "e8801215-9b11-4a43-b979-344afccbfcc9"
-        },
-        {
-            "nome": "produto teste2",
-            "descricao": "uma descricao qualquer",
-            "preco": 700,
-            "imagem": "foto.jpg",
-            "id": "fde550fa-7f2b-4560-bff7-5011f67b6757"
-        },
-        {
-            "nome": "produto teste2",
-            "descricao": "uma descricao qualquer",
-            "preco": 700,
-            "imagem": "foto.jpg",
-            "id": "cd3b9cb7-b563-44c0-93d0-d1fc538a5de6"
-        },
-        {
-            "nome": "produto teste2",
-            "descricao": "uma descricao qualquer",
-            "preco": 700,
-            "imagem": "foto.jpg",
-            "id": "5427c68a-2ef2-4b13-bf7c-2ee741e047af"
+          "produto_id": 2,
+          "quantidade": 1,
+          "preco_unitario": 30
         }
-    ],
-    "clientes": [
+      ]
+    },
+    {
+      "id": 2,
+      "cliente_id": 2,
+      "data_pedido": "2022-01-15",
+      "status": "entregue",
+      "itens": [
         {
-            "id": 1,
-            "nome": "João Silva",
-            "email": "joao.silva@example.com",
-            "senha": "123456",
-            "endereco": {
-                "rua": "Rua dos Pinheiros",
-                "numero": 123,
-                "bairro": "Centro",
-                "cidade": "São Paulo",
-                "estado": "SP",
-                "cep": "01234-567"
-            }
-        },
-        {
-            "id": 2,
-            "nome": "Maria Oliveira",
-            "email": "maria.oliveira@example.com",
-            "senha": "abcdef",
-            "endereco": {
-                "rua": "Rua das Flores",
-                "numero": 456,
-                "bairro": "Jardim",
-                "cidade": "Rio de Janeiro",
-                "estado": "RJ",
-                "cep": "98765-432"
-            }
+          "produto_id": 3,
+          "quantidade": 1,
+          "preco_unitario": 50
         }
-    ],
-    "pedidos": [
-        {
-            "id": 1,
-            "cliente_id": 1,
-            "data_pedido": "2022-01-01",
-            "status": "pendente",
-            "itens": [
-                {
-                    "produto_id": 1,
-                    "quantidade": 2,
-                    "preco_unitario": 1500
-                },
-                {
-                    "produto_id": 2,
-                    "quantidade": 1,
-                    "preco_unitario": 30
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "cliente_id": 2,
-            "data_pedido": "2022-01-15",
-            "status": "entregue",
-            "itens": [
-                {
-                    "produto_id": 3,
-                    "quantidade": 1,
-                    "preco_unitario": 50
-                }
-            ]
-        }
-    ]
+      ]
+    }
+  ]
 }
