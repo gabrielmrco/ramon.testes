@@ -123,6 +123,21 @@
       "nome": "Produto Teste",
       "preco": 99.99,
       "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
     }
   ],
   "clientes": [
@@ -265,6 +280,24 @@
       "email": "novo.cliente@example.com",
       "senha": "senha123",
       "id": 23
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 24
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 25
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 26
     }
   ],
   "pedidos": [

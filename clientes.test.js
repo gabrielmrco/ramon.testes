@@ -2,21 +2,21 @@ const app = require("./index");
 const request = require("supertest");
 
 describe('GET /api/clientes', () => {
-    it('pegar a lista de clientes com sucesso', async () => {
+    it('retorna lista de clientes', async () => {
         const res = await request(app).get('/api/clientes').send();
         expect(res.status).toBe(200);
-        expect(Array.isArray(res.body)).toBeTruthy();
+        expect(Array.isArray(res.body)).toBe(true);
     });
 
-    it('retornar cliente específico com sucesso', async () => {
-        const clienteId = 5; 
+    it('retorna cliente específico', async () => {
+        const clienteId = 5;
         const res = await request(app).get(`/api/clientes/${clienteId}`).send();
         expect(res.status).toBe(200);
         expect(res.body.id).toBe(clienteId);
     });
 
-    it('retornar 404 se o cliente não for encontrado', async () => {
-        const clienteId = 9999654656; 
+    it('erro ao buscar cliente inexistente', async () => {
+        const clienteId = 9999654656;
         const res = await request(app).get(`/api/clientes/${clienteId}`).send();
         expect(res.status).toBe(404);
         expect(res.body.error).toBe('Cliente não encontrado');
@@ -24,7 +24,7 @@ describe('GET /api/clientes', () => {
 });
 
 describe('POST /api/clientes', () => {
-    it('criar cliente com sucesso', async () => {
+    it('cria um cliente', async () => {
         const res = await request(app).post('/api/clientes').send({
             nome: 'Novo Cliente',
             email: 'novo.cliente@example.com',
@@ -34,13 +34,11 @@ describe('POST /api/clientes', () => {
         expect(res.body.nome).toBe('Novo Cliente');
         expect(res.body.email).toBe('novo.cliente@example.com');
     });
-
-    
 });
 
 describe('PUT /api/clientes/:id', () => {
-    it('atualizar cliente com sucesso', async () => {
-        const clienteId = 4; 
+    it('atualiza um cliente', async () => {
+        const clienteId = 4;
         const res = await request(app).put(`/api/clientes/${clienteId}`).send({
             nome: 'Gabriel Atualizado',
             email: 'atualizado@xte.com',
@@ -51,8 +49,8 @@ describe('PUT /api/clientes/:id', () => {
         expect(res.body.email).toBe('atualizado@xte.com');
     });
 
-    it('retornar 404 se o cliente não for encontrado', async () => {
-        const clienteId = 99999; 
+    it('erro ao atualizar cliente inexistente', async () => {
+        const clienteId = 99999;
         const res = await request(app).put(`/api/clientes/${clienteId}`).send({
             nome: 'Cliente Inexistente',
             email: 'inexistente@xte.com',
@@ -61,19 +59,17 @@ describe('PUT /api/clientes/:id', () => {
         expect(res.status).toBe(404);
         expect(res.body.error).toBe('Cliente não encontrado');
     });
-
-    
 });
 
 describe('DELETE /api/clientes/:id', () => {
-    it('deletar cliente com sucesso', async () => {
-        const clienteId = 2; // ID existente
+    it('deleta um cliente', async () => {
+        const clienteId = 2;
         const res = await request(app).delete(`/api/clientes/${clienteId}`).send();
         expect(res.status).toBe(204);
     });
 
-    it('retornar 404 se o cliente não for encontrado', async () => {
-        const clienteId = 9999; // ID que não existe
+    it('erro ao deletar cliente inexistente', async () => {
+        const clienteId = 9999;
         const res = await request(app).delete(`/api/clientes/${clienteId}`).send();
         expect(res.status).toBe(404);
         expect(res.body.error).toBe('Cliente não encontrado');

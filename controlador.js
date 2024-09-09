@@ -1,8 +1,6 @@
 const db = require('./db.json');
 const fs = require('fs');
 
-
-// Funções para Produtos :))))
 const listProdutos = async (req, res) => {
     res.json(db.produtos);
 };
@@ -10,13 +8,13 @@ const listProdutos = async (req, res) => {
 const getProduto = async (req, res) => {
     const _id = parseInt(req.params.id, 10);
     const produto = db.produtos.find(produto => produto.id === _id);
-    produto ? res.json(produto) : res.status(404).json({ error: 'Produto não encontrado' });
+    produto ? res.json(produto) : res.status(404).json({ error: 'produto não encontrado' });
 };
 
 const createProduto = async (req, res) => {
     const dados = req.body;
     if (!dados.nome || !dados.preco) {
-        return res.status(400).json({ error: 'Nome e preço devem ser informados' });
+        return res.status(400).json({ error: 'nome e preço devem ser informados' });
     }
 
     const _id = db.produtos.length ? Math.max(...db.produtos.map(p => p.id)) + 1 : 1;
@@ -25,7 +23,7 @@ const createProduto = async (req, res) => {
 
     fs.writeFile('./db.json', JSON.stringify(db, null, 2), err => {
         if (err) {
-            return res.status(500).json({ error: 'Erro no servidor' });
+            return res.status(500).json({ error: 'erro no servidor' });
         }
         res.status(201).json(dados);
     });
@@ -37,7 +35,7 @@ const updateProduto = async (req, res) => {
     const produtoIndex = db.produtos.findIndex(produto => produto.id === _id);
 
     if (produtoIndex === -1) {
-        return res.status(404).json({ error: 'Produto não encontrado' });
+        return res.status(404).json({ error: 'produto não encontrado' });
     }
 
     const produto = db.produtos[produtoIndex];
@@ -45,7 +43,7 @@ const updateProduto = async (req, res) => {
         if (produto.hasOwnProperty(chave)) {
             produto[chave] = novosDados[chave];
         } else {
-            console.log(`A chave ${chave} não existe no produto.`);
+            console.log(`a chave ${chave} não existe no produto.`);
         }
     }
 
@@ -62,7 +60,7 @@ const deleteProduto = async (req, res) => {
     const produtoIndex = db.produtos.findIndex(produto => produto.id === _id);
 
     if (produtoIndex === -1) {
-        return res.status(404).json({ error: 'Produto não encontrado' });
+        return res.status(404).json({ error: 'produto não encontrado' });
     }
 
     db.produtos.splice(produtoIndex, 1);
@@ -75,7 +73,6 @@ const deleteProduto = async (req, res) => {
     });
 };
 
-// Funções para Clientes daqui pra  baicxo :)
 const listClientes = async (req, res) => {
     res.json(db.clientes);
 };
