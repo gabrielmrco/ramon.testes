@@ -63,7 +63,7 @@ describe('PUT /api/clientes/:id', () => {
 
 describe('DELETE /api/clientes/:id', () => {
     it('deleta um cliente', async () => {
-        const clienteId = 5;
+        const clienteId = 18;
         const res = await request(app).delete(`/api/clientes/${clienteId}`).send();
         expect(res.status).toBe(204);
     });
