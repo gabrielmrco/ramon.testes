@@ -9,14 +9,6 @@
       "imagem": "camiseta.jpg"
     },
     {
-      "id": 3,
-      "nome": "Vaso de Flores",
-      "descricao": "Vaso de flores decorativo",
-      "preco": 50,
-      "categoria_id": 3,
-      "imagem": "vaso_flores.jpg"
-    },
-    {
       "nome": "produto teste",
       "descricao": "uma descricao qualquer",
       "preco": 600,
@@ -43,6 +35,16 @@
       "preco": 700,
       "imagem": "foto.jpg",
       "id": "5427c68a-2ef2-4b13-bf7c-2ee741e047af"
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
     },
     {
       "nome": "Produto Atualizado",
@@ -138,23 +140,29 @@
       "nome": "Produto Teste",
       "preco": 99.99,
       "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
+    },
+    {
+      "nome": "Produto Teste",
+      "preco": 99.99,
+      "id": null
     }
   ],
   "clientes": [
-    {
-      "id": 2,
-      "nome": "Maria Oliveira",
-      "email": "maria.oliveira@example.com",
-      "senha": "abcdef",
-      "endereco": {
-        "rua": "Rua das Flores",
-        "numero": 456,
-        "bairro": "Jardim",
-        "cidade": "Rio de Janeiro",
-        "estado": "RJ",
-        "cep": "98765-432"
-      }
-    },
     {
       "nome": "Douglass",
       "email": "BD@texte.com",
@@ -166,12 +174,6 @@
       "email": "atualizado@xte.com",
       "senha": "NovaSenha123",
       "id": 4
-    },
-    {
-      "nome": "Gabriel",
-      "email": "BD@xte.com",
-      "senha": "DbBdGa",
-      "id": 5
     },
     {
       "nome": "Gabriel",
@@ -298,6 +300,48 @@
       "email": "novo.cliente@example.com",
       "senha": "senha123",
       "id": 26
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 27
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 28
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 29
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 30
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 31
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 32
+    },
+    {
+      "nome": "Novo Cliente",
+      "email": "novo.cliente@example.com",
+      "senha": "senha123",
+      "id": 33
     }
   ],
   "pedidos": [

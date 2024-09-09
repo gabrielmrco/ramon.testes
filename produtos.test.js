@@ -24,7 +24,7 @@ describe('POST /api/produtos', () => {
     it('erro ao criar produto sem dados', async () => {
         const res = await request(app).post('/api/produtos').send({});
         expect(res.status).toBe(400);
-        expect(res.body.error).toBe('Nome e preço devem ser informados');
+        expect(res.body.error).toBe('nome e preço devem ser informados');
     });
 });
 
@@ -45,19 +45,19 @@ describe('PUT /api/produtos/:id', () => {
             preco: 0
         });
         expect(res.status).toBe(404);
-        expect(res.body.error).toBe('Produto não encontrado');
+        expect(res.body.error).toBe('produto não encontrado');
     });
 });
 
 describe('DELETE /api/produtos/:id', () => {
     it('deleta um produto', async () => {
-        const res = await request(app).delete(`/api/produtos/12`);
+        const res = await request(app).delete(`/api/produtos/2`);
         expect(res.status).toBe(204);
     });
 
     it('erro ao deletar produto inexistente', async () => {
-        const res = await request(app).delete(`/api/produtos/9999`);
+        const res = await request(app).delete(`/api/produtos/99999`);
         expect(res.status).toBe(404);
-        expect(res.body.error).toBe('Produto não encontrado');
+        expect(res.body.error).toBe('produto não encontrado');
     });
 });

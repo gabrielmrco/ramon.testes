@@ -9,7 +9,7 @@ describe('GET /api/clientes', () => {
     });
 
     it('retorna cliente específico', async () => {
-        const clienteId = 5;
+        const clienteId = 6;
         const res = await request(app).get(`/api/clientes/${clienteId}`).send();
         expect(res.status).toBe(200);
         expect(res.body.id).toBe(clienteId);
@@ -63,7 +63,7 @@ describe('PUT /api/clientes/:id', () => {
 
 describe('DELETE /api/clientes/:id', () => {
     it('deleta um cliente', async () => {
-        const clienteId = 2;
+        const clienteId = 5;
         const res = await request(app).delete(`/api/clientes/${clienteId}`).send();
         expect(res.status).toBe(204);
     });
