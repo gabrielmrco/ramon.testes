@@ -1,5 +1,6 @@
 const db = require('./db.json');
 const fs = require('fs');
+const bcryptjs = require('bcryptjs')
 
 const listProdutos = async (req, res) => {
     res.json(db.produtos);

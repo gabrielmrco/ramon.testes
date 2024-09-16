@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const controlador = require('./controlador');
+const { validadorDeCookies } = require('./validadorDeCookie')
 
 router.get('/produtos', controlador.listProdutos);               
 router.get('/produtos/:id', controlador.getProduto);             
