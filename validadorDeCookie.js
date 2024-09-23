@@ -1,18 +1,18 @@
-// const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 
-// function validadorDeCookie(req, res, next) {
-//     const token = req.cookies.TokenAulaBE
+function validadorDeCookie(req, res, next) {
+    const token = req.cookies.TokenAulaBE
    
-//     if(!token){
-//         return res.status(401).send({mensagem: 'nao autorizado'})
-//     }
-//     try {
-//         const decodificado = jwt.verify(token, 'process.env.chave_criptografia')
-//     } catch{
-//         return res.status(401).send({mensagem: 'nao autorizado'})
-//     }
+    if(!token){
+        return res.status(401).send({mensagem: 'nao autorizado'})
+    }
+    try {
+        const decodificado = jwt.verify(token, 'process.env.chave_criptografia')
+    } catch{
+        return res.status(401).send({mensagem: 'nao autorizado'})
+    }
 
-//     next();
-// }
+    next();
+}
 
-// module.exports = {validadorDeCookie}
+module.exports = {validadorDeCookie}
