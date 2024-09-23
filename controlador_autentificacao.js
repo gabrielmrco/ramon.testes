@@ -1,4 +1,4 @@
-const db = require('../db.json')
+const db = require('./db.json')
 const bcrypt = require("bcryptjs")
 const jwt = require('jsonwebtoken')
 
@@ -50,4 +50,4 @@ const logout = async (req, res) => {
 }
 
 
-module.exports = {login}
+module.exports = {login, logout}
