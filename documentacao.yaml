@@ -1,0 +1,178 @@
+openapi: 3.0.3
+info:
+  title: API de Clientes e Produtos
+  description: API para gerenciar clientes e produtos, JSON como banco de dados.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+paths: 
+  /api/clientes:
+    get:
+      summary: Lista todos os clientes
+      responses:
+        '200':
+          description: Retorna a lista de clientes.
+    post:
+      summary: Cria um novo cliente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                email:
+                  type: string
+                senha:
+                  type: string
+      responses:
+        '201':
+          description: Cliente criado.
+        '400':
+          description: Dados faltando.
+  /api/clientes/{id}:
+    get:
+      summary: Retorna um cliente específico
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: Retorna o cliente.
+        '404':
+          description: Cliente não encontrado.
+    put:
+      summary: Atualiza um cliente
+      parameters:
+        - name: id
+          in: path
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                email:
+                  type: string
+                senha:
+                  type: string
+      responses:
+        '200':
+          description: Cliente atualizado.
+        '404':
+          description: Cliente não encontrado.
+    delete:
+      summary: Deleta um cliente
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '204':
+          description: Cliente deletado.
+        '404':
+          description: Cliente não encontrado.
+
+  /api/produtos:
+    get:
+      summary: Lista todos os produtos
+      responses:
+        '200':
+          description: Retorna a lista de produtos.
+    post:
+      summary: Cria um novo produto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                preco:
+                  type: number
+      responses:
+        '201':
+          description: Produto criado.
+        '400':
+          description: Dados faltando.
+  /api/produtos/{id}:
+    get:
+      summary: Retorna um produto específico
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: Retorna o produto.
+        '404':
+          description: Produto não encontrado.
+    put:
+      summary: Atualiza um produto
+      parameters:
+        - name: id
+          in: path
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                preco:
+                  type: number
+      responses:
+        '200':
+          description: Produto atualizado.
+        '404':
+          description: Produto não encontrado.
+    delete:
+      summary: Deleta um produto
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '204':
+          description: Produto deletado.
+        '404':
+          description: Produto não encontrado.
+
+  /auth/login:
+    post:
+      summary: Faz login de um cliente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                senha:
+                  type: string
+      responses:
+        '200':
+          description: Login feito.
+        '404':
+          description: Cliente não encontrado.
+
+  /auth/logout:
+    post:
+      summary: Faz logout de um cliente
+      responses:
+        '200':
+          description: Logout feito.
